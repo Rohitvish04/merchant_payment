@@ -87,4 +87,86 @@ Copy
 node server.js
 The backend will run on http://localhost:5000.
 
+3. Frontend Setup
+Navigate to the frontend folder:
 
+bash
+Copy
+cd ../frontend
+Install dependencies:
+
+bash
+Copy
+npm install
+Start the frontend development server:
+
+bash
+Copy
+npm run dev
+The frontend will run on http://localhost:5173.
+
+API Endpoints
+Authentication
+Register: POST /api/auth/register
+
+json
+Copy
+{
+  "email": "test@example.com",
+  "password": "password123"
+}
+Login: POST /api/auth/login
+
+json
+Copy
+{
+  "email": "test@example.com",
+  "password": "password123"
+}
+Payments
+Create Payment: POST /api/payments/create
+
+json
+Copy
+{
+  "amount": 100.50
+}
+Get Transactions: GET /api/payments/transactions
+
+Folder Structure
+Copy
+merchant-payment-system/
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── app.js
+│   └── server.js
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+├── database/
+│   └── migrations/
+└── README.md
+Usage
+Register:
+
+Go to the /register page and create a new account.
+
+Login:
+
+Go to the /login page and log in with your credentials.
+
+Dashboard:
+
+After logging in, you will be redirected to the /dashboard page.
+
+View your transactions and create new payments.
