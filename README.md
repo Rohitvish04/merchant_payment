@@ -49,3 +49,42 @@ A full-stack web application that allows merchants to register, log in, create p
 ```bash
 git clone https://github.com/your-username/merchant_payment.git
 cd merchant_payment
+
+
+2. Backend Setup
+Navigate to the backend folder:
+
+bash
+Copy
+cd backend
+Install dependencies:
+
+bash
+Copy
+npm install
+Set up the database:
+
+Create a PostgreSQL database named merchant_payment.
+
+Update the .env file with your database credentials:
+
+env
+Copy
+DB_NAME=merchant_payment
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
+DB_HOST=localhost
+JWT_SECRET=your_jwt_secret
+Run database migrations:
+
+bash
+Copy
+npx sequelize-cli db:migrate
+Start the backend server:
+
+bash
+Copy
+node server.js
+The backend will run on http://localhost:5000.
+
+
